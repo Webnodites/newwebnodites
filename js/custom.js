@@ -253,7 +253,7 @@ Assigned to: Theme Forest
 								youtube: {
 									index: 'youtube.com/', 
 									id: 'v=',
-									src: 'https://www.youtube.com/embed/BGRif5ClL9o'
+									src: 'https://www.youtube.com/embed/_ibuH26NWMw'
 									}
 								}
 						}
