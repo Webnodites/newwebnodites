@@ -425,7 +425,9 @@ p {
   /********************************************************
 5.Banner Slider End
  *******************************************************/ 
- 
+ .progress_leftbox{
+    text-align: center;
+ }
  /********************************************************
 6.index services Start
  *******************************************************/ 
@@ -6220,6 +6222,9 @@ li.int_home_dropdown:before {
 .int_heading span {
     font-size: 60px;
 	top: -5px;
+}
+.int_heading h4{
+    z-index: 0;
 }
 .testimonial_box_wrapper .gallery-thumbs .swiper-slide-thumb-active .swi_user img {
     width: 70px;
