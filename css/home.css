@@ -507,12 +507,33 @@ h4{
   padding: 0px 10px;
   }
   .carousel-control .glyphicon-chevron-left{
+    left: -30%;
+}
+.carousel-control .glyphicon-chevron-right {
+    right: -30%;
+}
+}
+@media (max-width: 700px)
+{
+
+  .hero-section {
+    height: 600px;
+  }
+  .hr-img{
+    display: none;
+  }
+   .hs-text {
+  padding: 0px 10px;
+  }
+  .carousel-control .glyphicon-chevron-left{
     left: 45%;
 }
 .carousel-control .glyphicon-chevron-right {
     right: 95%;
 }
 }
+
+
 
 /*End Recent Work Area*/
 

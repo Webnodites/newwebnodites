@@ -112,9 +112,7 @@ header nav ul li a:hover
         }
 }
 
-.page {
-  overflow: hidden;
-}
+
 .port-banner {
   /*background-image: url(../img/portilio-banner.jpg);*/
   background-color: black;

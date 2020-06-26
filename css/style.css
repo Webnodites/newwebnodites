@@ -255,6 +255,9 @@ p {
     color: #fff;
     background: #555555;
 }
+.howwework .int_heading span{
+    line-height: 52px;
+} 
 .index3_btn, .index3_btn:focus {
     min-width: 170px;
     height: 50px;
@@ -427,6 +430,10 @@ p {
  *******************************************************/ 
  .progress_leftbox{
     text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10% 0;
  }
  /********************************************************
 6.index services Start
@@ -6203,10 +6210,10 @@ li.int_home_dropdown:before {
     padding: 77px 15px 80px;
 }
 .int_progresbar_wrapper .progress_leftbox .video_icon {
-    top: 260px;
+   
 }
 .int_progresbar_wrapper .progress_rightbox {
-    padding: 220px 50px 40px 30px;
+    padding: 100px 50px 40px 30px;
     text-align: center;
 }
 .int_prog_box {
@@ -6667,7 +6674,7 @@ li.int_home_dropdown:before {
     padding: 20px 29px;
 }
 .int_progresbar_wrapper .progress_rightbox {
-    padding: 100px 15px 10px 0;
+    padding: 50px 15px 10px 0;
 }
 .testimonial_box_wrapper .swi_contentbox {
     padding: 30px;
