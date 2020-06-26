@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="js/home.js"></script>  
+
 </head>
 <style type="text/css">
-	
+	body
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
  header 
 {
@@ -105,8 +110,8 @@ header nav ul li a:hover
         {
           padding: 50px 0 ;
        position:fixed;
-       left:-40%;
-       width: 40%;
+       left:-50%;
+       width: 50%;
        height: 100vh;
        background: rgba(0,0,0.9);
        transition: 0.6s;
@@ -158,22 +163,22 @@ header nav ul li a:hover
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
 
 <script type="text/javascript">
-  $(document).on('click', '#mobile-nav-toggle', function (e) {
+  $('.toggle').click(function(){
+          $('.sidebar-contact').toggleClass('active')
+              $('.toggle').toggleClass('active')
+          });
+
+          $('.menu-toggle').click(function(){
+            $('nav').toggleClass('active')
+          });
+
+        $(document).on('click', '#mobile-nav-toggle', function (e) {
             $('body').toggleClass('mobile-nav-active');
             $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
          
         });
 
-        $(document).click(function (e) {
-            var container = $("#mobile-nav, #mobile-nav-toggle");
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                if ($('body').hasClass('mobile-nav-active')) {
-                    $('body').removeClass('mobile-nav-active');
-                    $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-                 
-                }
-            }
-        });
+       
 </script>
 </body>
 </html>
