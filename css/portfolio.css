@@ -245,7 +245,7 @@ display: none;
 	}
 .portfoliobox:hover .feature
 {
-	margin-top:100px;
+	margin-top:30%;
 	transition:all .5s ease;
 }
 .feature a:hover
@@ -286,6 +286,7 @@ display: none;
     }
     .portfoliobox {
    padding: 0 30px;
+   height: 480px;
 } 
 }
 
