@@ -153,7 +153,6 @@ p {
 	color: #ffffff;
     text-transform: capitalize;
     font-weight: 500;
-    z-index: 2;
     position: relative;
     margin-top: 6px;
 }
@@ -549,7 +548,7 @@ p {
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	-ms-transition: all 0.3s;
-	z-index: 2;
+	z-index: 1;
 }
 .service_box_wrapper .service_box:hover .service_designation {
     left:18px;
@@ -727,7 +726,7 @@ p {
     color: #ffffff;
     font-size: 32px;
     font-weight: 500;
-    z-index: 2;
+    z-index: 1;
 }
 .int_process_wrapper .process_circle {
     margin-bottom: 48px;
@@ -782,7 +781,7 @@ p {
     top: 11px;
     margin: auto;
     color: #33393f;
-    z-index: 2;
+    z-index: 1;
     content: ">";
     font-family: "Font Awesome 5 Free";
     font-style: normal;
@@ -866,7 +865,7 @@ p {
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 2;
+    z-index: 1;
 }
 .progress_leftbox .video_icon i {
     font-size: 25px;
@@ -1015,7 +1014,7 @@ p {
     height: 7px;
     border-radius: 50%;
     background: #06C2C8;
-    z-index: 7;
+    z-index: 1;
     bottom: -32px;
     left: 0;
     right: 0;
@@ -1035,7 +1034,7 @@ p {
     height: 4px;
     border-radius: 50%;
     background: #06C2C8;
-    z-index: 7;
+    z-index: 1;
     bottom: -40px;
     left: 0;
     right: 0;
@@ -1457,7 +1456,7 @@ p {
 	background-size: cover;
     background-position: center center;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 }
 .int_video_section_style2:after {
     position: absolute;
