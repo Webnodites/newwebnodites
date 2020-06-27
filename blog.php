@@ -88,7 +88,7 @@ session_start();
             <h4>
               <a href="blogdetail.php?id=<?php echo $blog['id'];?>"><?php echo substr($blog['title'],0,25);?>...</a>
             </h4>
-            <i class="fa fa-user"><?php echo $blog['user'];?></i>
+            <i class="fa fa-user"> <?php echo $blog['user'];?></i>
                 &nbsp;
             <i class="fa fa-calendar"> <?php echo $blog['date'];?></i>
           </div>
@@ -102,9 +102,9 @@ session_start();
             <h4>
               <a href="s.html">lorem ipsum</a>
             </h4>
-            <i class="fa fa-user">lorem ipsum</i>
+            <i class="fa fa-user"> lorem ipsum</i>
               &nbsp;
-            <i class="fa fa-calendar">may 18,2020</i>
+            <i class="fa fa-calendar"> may 18,2020</i>
           </div>
         </div>
           
@@ -113,9 +113,9 @@ session_start();
             <h4>
               <a href="s.html">lorem ipsum</a>
             </h4>
-            <i class="fa fa-user">lorem ipsum</i>
+            <i class="fa fa-user"> lorem ipsum</i>
               &nbsp;
-            <i class="fa fa-calendar">may 18,2020</i>
+            <i class="fa fa-calendar"> may 18,2020</i>
           </div>
         </div>
         
@@ -124,9 +124,9 @@ session_start();
             <h4>
               <a href="s.html">lorem ipsum</a>
             </h4>
-            <i class="fa fa-user">lorem ipsum</i>
+            <i class="fa fa-user"> lorem ipsum</i>
               &nbsp;
-            <i class="fa fa-calendar">may 18,2020</i><
+            <i class="fa fa-calendar"> may 18,2020</i><
           </div>
         </div>
       </div>
