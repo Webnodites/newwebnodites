@@ -20,7 +20,7 @@ $e= $_POST["editor_content"];
 $file= $_FILES["image"]["name"];
 $uimg= $_FILES["userimage"]["name"];
 
-$z= "INSERT INTO `blog`(`title`, `user`,`userimg`, `date`, `shortdes`, `longdes`, `img`) VALUES ('$a','$b','$uimg'              ,'$c','$d', '$e','$file')";
+$z= "INSERT INTO `blog`(`title`, `user`,`userimg`, `date`, `shortdes`, `longdes`, `img`,`status`) VALUES('$a','$b'                  ,'$uimg','$c','$d', '$e','$file','Active')";
 
 $res = mysqli_query($con,$z);
 if($res)
