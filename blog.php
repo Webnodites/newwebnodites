@@ -143,9 +143,11 @@ session_start();
            foreach ($res as $blog) {
                          
            ?>
-        <div class="post">
-          <img src="Images/blog/<?php echo $blog['img'];?>" class="post-image">
-          <div class="post-preview">
+        <div class="post row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <img src="Images/blog/<?php echo $blog['img'];?>" class="post-image">
+          </div>  
+          <div class="post-preview col-lg-8 col-md-8 col-sm-12">
             <h1><a href="blogdetail.php?id=<?php echo $blog['id'];?>"><?php echo $blog['title'];?></a></h1>
             <i class="fa fa-user"><?php echo $blog['user'];?></i>
                 &nbsp;

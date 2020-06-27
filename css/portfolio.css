@@ -448,6 +448,7 @@ display: none;
  .sidebar-contact.active
  {
  right: 0px;
+ z-index: 1;
  }
  
  .toggle {
