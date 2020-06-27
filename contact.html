@@ -116,35 +116,35 @@
 		</div>
 		<div class="int_contact_white_form">
 			<h1>Get In Touch</h1>
-			<form>
+			<form action="contact.php" method="post" name="cform" >
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form_block">
-							<input type="text" placeholder="First Name" name="full_name" id="full_name" class="require form_field"/>
+							<input type="text" name="name" class="only-alpha require form_field" placeholder="Full Name"  required/>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form_block">
-							<input type="text" placeholder="Last Name" name="last_name" id="last_name" class="require form_field"/>
+							<input type="text" placeholder="Mobile No." name="phone" class="require form_field only-numeric" maxlength="10" required/>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form_block">
-							<input type="text" placeholder="Email Address" name="email" id="email" class="require form_field" data-valid="email" data-error="Email should be valid."/>
+							<input type="email" name="email" placeholder="Email Address" class="require form_field" data-valid="email" data-error="Email should be valid." required/>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form_block">
-							<input type="text" placeholder="Subject" name="Subject" id="Subject" class="require form_field"/>
+							<input type="text" name="subject" class="require form_field only-alpha" placeholder="Subject" required/>
 						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="form_block">
-							<textarea placeholder="Message" name="message" id="message" class="require form_field"></textarea>
+							<textarea placeholder="Message" name="message" class="require form_field" required></textarea>
 						</div>
 					</div>
 				</div>
-			<button type="button" class="int_btn submitForm">Submit<span class="btn_caret"><i class="fas fa-caret-right"></i></span></button>
+			<button type="submit" name="contact_submit" class="int_btn submitForm">Submit<span class="btn_caret"><i class="fa fa-chevron-right "></i></span></button>
 			<div class="response"></div>
 			</form>
 		</div>
