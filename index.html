@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -30,13 +30,14 @@
 
 </head>
 <body >
+  
   <div class="page ng-scope" id="top"> 
     <section id="Home">         
         
         <div id="topology"> 
             <header style="z-index: 2;">
 
-                <div class="logo"><img id="img1" src="Images/logo/wlogo.png"></div>
+                <div class="logo"><a href="index.html"><img id="img1" src="Images/logo/wlogo.png"></a></div>
 
                 <nav>
                     <ul>
@@ -49,6 +50,20 @@
                     </ul>   
                 </nav>
                 <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+                
+                     <!--- Side Bar --->
+                <div class="sidebar-contact">
+                  <div class="toggle"></div>
+                  <h2>REQUEST A CALL BACK</h2>
+                  <form action="contact.php" method="post" class="">
+                      <input type="text" class="only-alpha" name="name" placeholder="Name" required>
+                      <input type="email" class="" name="email" placeholder="Email" required>
+                      <input type="text" class="only-numeric" name="mobile" maxlength="10" placeholder="Phone Number" required>
+                      <textarea placeholder="Message" name="msg" required></textarea>
+                      <input type="submit" value="Send" name="requestcall">
+                  </form>
+                </div>
+
             </header>
             
             
@@ -57,23 +72,7 @@
               <a href="#" class=" typewrite" data-period="1500" data-type='[ "Welcome to Webnodites.", "We are Web Developers.", "We love to code!" ]'> </a>
                   </h1> <!--end of heading-->
               </div>
-                
-              
-              <!--- Side Bar --->
-                  <div class="sidebar-contact">
-                      <div class="toggle"></div>
-                      <h2>REQUEST A CALL BACK</h2>
-                      <form action="contact.php" method="post" class="">
-                          <input type="text" class="only-alpha" name="name" placeholder="Name" required>
-                          <input type="email" class="" name="email" placeholder="Email" required>
-                          <input type="text" class="only-numeric" name="mobile" maxlength="10" placeholder="Phone Number" required>
-                          <textarea placeholder="Message" name="msg" required></textarea>
-                          <input type="submit" value="Send" name="requestcall">
-                      </form>
-                  </div>
-            
-
-                    
+       
         </div>
             
             <script src="js/three.r95.min.js"></script>
@@ -97,7 +96,7 @@
               <div class="about_contentbox">
                 <div class="about_content">
                   <div class="int_heading">
-                    <h4>About US</h4>                    
+                    <h4>About Us</h4>                    
                   </div>
                   
                   <p>
