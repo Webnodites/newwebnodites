@@ -3,31 +3,30 @@ $con=mysqli_connect("localhost","root","","webnodites");
 session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> Blog</title>
-    <meta charset="utf-8">
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css"> 
-    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/style.css">
-  
-    <script src="js/blog.js"></script>
-    <link  rel="shortcut icon" href="Images/logo/favicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="If you can dream it, we can design it.">
+<meta name="keywords" content="">
+<link rel="shortcut icon" href="Images/logo/favicon.png">
+<title>Blog</title>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css"> 
+<link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/blog.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/blog.js"></script>
 </head>
 <body>
    
@@ -37,12 +36,12 @@ session_start();
 		<div class="logo"><img id="img1" src="Images/logo/wlogo.png"></div>
 		<nav>
 			<ul>
-        <li><a href="index.html"  > HOME</a></li>
-        <li><a href="about.html"  > WHO WE ARE</a></li>
-        <li><a href="services.html" > SERVICES</a></li>
-        <li><a href="portfolio.html" > PORTFOLIO</a></li>
-        <li><a href="blog.html"  > BLOG</a></li>
-        <li><a href="contact.html" > CONTACT</a></li>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="about.html"> Who We Are</a></li>
+        <li><a href="services.html"> Services</a></li>
+        <li><a href="portfolio.html"> Portfolio </a></li>
+        <li><a href="blog.php"> Blog </a></li>
+        <li><a href="contact.html"> Contact </a></li>
 			</ul>
 
 		</nav>
