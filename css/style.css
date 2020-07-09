@@ -2351,6 +2351,7 @@ p {
 .int_service_box2 {
     text-align: center;
     padding: 52px 25px;
+    height: 315px;
     border: solid 1px #efefef;
     margin-bottom: 30px;
     transition: all 0.3s;
