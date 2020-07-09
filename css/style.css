@@ -31,7 +31,7 @@ Author: Kamleshyadav
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight:400;
-    font-size: 17px;
+    font-size: 15px;
     line-height:1.78;
     color:;
     -webkit-font-smoothing: antialiased;
@@ -2350,7 +2350,7 @@ p {
 }
 .int_service_box2 {
     text-align: center;
-    padding: 52px 30px;
+    padding: 52px 25px;
     border: solid 1px #efefef;
     margin-bottom: 30px;
     transition: all 0.3s;
@@ -2362,7 +2362,7 @@ p {
 .int_service_box2 h4 {
     margin-top: 25px;
     color: #222222;
-    font-size: 22px;
+    font-size: 20px;
     position: relative;
 }
 .int_service_box2 h4:after {
