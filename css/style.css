@@ -2660,6 +2660,7 @@ p {
 }
 .int_blog_box {
     margin-bottom: 50px;
+    text-align: center;
 }
 .int_blog_user {
     margin: 25px 0 5px;
@@ -2754,7 +2755,8 @@ p {
     height: 80px;
 }
 .int_blog_pagination a.page-link {
-    color: #222222;
+    color: white;
+    background: #212529;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -2765,6 +2767,19 @@ p {
     border: 1px solid #efefef;
     box-shadow: none;
 }
+.page-item.disabled .page-link {
+    color: white;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #212529;
+    border-color:  #212529;
+}
+.int_blog_pagination{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 .int_blog_pagination .page-item:first-child .page-link {
     width: 85px;
     border-radius: 0;
@@ -2774,18 +2789,20 @@ p {
     border-radius: 0;
 }
 .int_blog_pagination .page-item.active .page-link {
-    background-color: #ff1d4d;
-    border-color: #efefef;
+    background-color: #06C2C8;
+    border-color: #06C2C8;
+    color: white;
     transition: 0.3s all;
+    cursor: pointer;
 }
 .int_blog_pagination .page-item .page-link:hover {
     transform: scale(1.2);
 }
 .int_blog_pagination .page-link:hover {
-    background-color: #ff1d4d;
-    border-color: #ff1d4d;
-    color: #ffffff;
-    box-shadow: 0px 12px 15px 0px rgba(255, 29, 77, 0.3);
+    background-color: #06C2C8;
+    border-color: #06C2C8;
+    color:white;
+    box-shadow: none;
 }
 .int_blog_pagination i.fas.fa-chevron-left {
     margin-right: 2px;

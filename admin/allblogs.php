@@ -55,6 +55,7 @@ $res = mysqli_query($con,$data);
       <tr>
         <th scope="col">#SR.NO</th>
         <th scope="col">BLOG NAME</th>
+        <th scope="col">BLOG Category</th>
         <th scope="col">BLOG IMAGE</th>
         <th scope="col">LAST UPDATE</th>
         <th scope="col">ACTION</th>
@@ -68,8 +69,9 @@ $res = mysqli_query($con,$data);
             $index++;
         ?>
         <tr>
-          <th scope="row"><?php echo $index;?></th>
+          <td scope="row"><?php echo $index;?></td>
           <td><a href="blogdetail.php?blogid=<?php echo $blog['id'];?>"><?php echo $blog['title'];?></a></td>
+          <td><?php echo $blog['category'];?></td>
           <td><img src="../Images/blog/<?php echo $blog['img'];?>"></td>
           <td>On <?php echo $blog['date'];?> </td>
           <?php

@@ -16,11 +16,13 @@ $a= $_POST["title"];
 $b= $_POST["user"];
 $c= $_POST["date"];
 $d= $_POST["shortdesc"];
+$u= $_POST["userdesc"];
+$ct= $_POST["category"];
 $e= $_POST["editor_content"];
 $file= $_FILES["image"]["name"];
 $uimg= $_FILES["userimage"]["name"];
 
-$z= "INSERT INTO `blog`(`title`, `user`,`userimg`, `date`, `shortdes`, `longdes`, `img`,`status`) VALUES('$a','$b'                  ,'$uimg','$c','$d', '$e','$file','Active')";
+$z= "INSERT INTO `blog`(`title`,`user`,`userdes`,`category`,`userimg`, `date`, `shortdes`, `longdes`         ,`img`,`status`) VALUES('$a','$b','$u','$ct','$uimg','$c','$d', '$e','$file','Active')";
 
 $res = mysqli_query($con,$z);
 if($res)
@@ -88,9 +90,16 @@ mysqli_close($con);
     		  <input type="text" class="form-control" name="title" autocomplete="off" required>
   		  </div>
       </div>
+
+      <div class="form-group row">
+        <label for="category" class="col-sm-2 col-form-label">Category</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="category" autocomplete="off" required>
+        </div>
+      </div>
         
       <div class="form-group row">
-    		<label for="user" class="col-sm-2 col-form-label">User</label>
+    		<label for="user" class="col-sm-2 col-form-label">Author</label>
     		<div class="col-sm-10">
           <input type="text" class="form-control" name="user" autocomplete="off" required>
   		  </div>
@@ -118,11 +127,18 @@ mysqli_close($con);
      </div>
 
      <div class="form-group row">
-        <label for="userpic" class="col-sm-2 col-form-label">User Image</label>
+        <label for="userpic" class="col-sm-2 col-form-label">Author Image</label>
          <div class="col-sm-10">
             <input type="file" class="form-control-file" id="userimage" name="userimage">
         </div>
      </div>
+
+      <div class="form-group row">
+        <label for="userdesc" class="col-sm-2 col-form-label">Author Description</label>
+         <div class="col-sm-10">
+        <textarea class="form-control" id="shortdesc" name="userdesc" rows="3" ></textarea>
+        </div>
+      </div>  
 
 
 		 <div class="form-group row">

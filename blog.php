@@ -1,6 +1,8 @@
 <?php
 $con=mysqli_connect("localhost","root","","webnodites");
 session_start();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +78,7 @@ session_start();
       </div>
       <div class="post-wrapper">
         <?php
-           $q = "select * from blog";
+           $q = "select * from blog Limit 5";
            $res = mysqli_query($con, $q);
            foreach ($res as $blog) {
                          
@@ -130,40 +132,16 @@ session_start();
         </div>
       </div>
     </div>
+
+
       
     <div class="content clearfix">
       <div class="main-content">
         <div class="int_heading slider-title">
           <h4><span></span>All Posts </h4>                    
         </div>
-        <?php
-           $q = "select * from blog";
-           $res = mysqli_query($con, $q);
-           foreach ($res as $blog) {
-                         
-           ?>
-        <div class="post row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <img src="Images/blog/<?php echo $blog['img'];?>" class="post-image">
-          </div>  
-          <div class="post-preview col-lg-8 col-md-8 col-sm-12">
-            <h1><a href="blogdetail.php?id=<?php echo $blog['id'];?>"><?php echo $blog['title'];?></a></h1>
-            <i class="fa fa-user"><?php echo $blog['user'];?></i>
-                &nbsp;
-            <i class="fa fa-calendar"> <?php echo $blog['date'];?></i>
-            <p class="preview-text">
-                <?php echo $blog['shortdes'];?>
-                
-            </p>
-            <div class="read-more text-right">
-                <a href="blogdetail.php?id=<?php echo $blog['id'];?>" class="int_btn ">Read More</a>
-            </div>
-
-          </div>
+        <div id="dynamic_content">
         </div>
-        <?php
-          }
-        ?>
       
       </div>
         
@@ -173,8 +151,9 @@ session_start();
           <div class="int_heading ">
           <h4><span></span>Search</h4>                    
         </div>
-          <form action="abc.html" method="post">
-            <input type="text" name="search-term" class="text-input" placeholder="Search">
+          <form action="blog.php" method="post">
+            <input type="text" name="searchval" id="search_box" class="text-input" placeholder="Search">
+           
           </form>
         </div>
 
@@ -183,11 +162,13 @@ session_start();
           <h4><span></span>Topics</h4>                    
         </div>
             <ul>
-              <li><a href="#">App</a></li>
-              <li><a href="#">Gates</a></li>
-              <li><a href="#">Web</a></li>
-              <li><a href="#">Cloud</a></li>
-              <li><a href="#">Software</a></li>
+              <li><button  id ="app" value ="app">App</button></li>
+              <li><button  id="education" value="education">Education</button></li>
+              <li><button  id="web" value="web">Web</button></li>
+              <li><button  id="software" value="software">Software</button></li>
+              <li><button  id="cloud" value="cloud">Cloud</button></li>
+             
+            
             </ul>
         </div>
       </div>
@@ -214,7 +195,7 @@ session_start();
     </div>
   <section id="contact">
     <div class="page-section1 footer pb-60" style="background: #111111;">
-        <section class="small-section bg-dark">
+        <section class="small-section">
             <div class="container relative">
                 <div class="text-left">
                     <h2 style="color: #808080;font-size:100px;line-height:100px;margin: 0px; cursor: pointer; font-family: 'Montserrat', sans-serif;">Don't be shy<br>
@@ -314,6 +295,68 @@ session_start();
   </section>
 </div>  
 
+
  <script src="js/validate.js"></script>
+ <script>
+  $(document).ready(function(){
+
+   
+
+    function load_data(page, query = '')
+    {
+      $.ajax({
+        url:"fetch.php",
+        method:"POST",
+        data:{page:page, query:query},
+        success:function(data)
+        {
+          $('#dynamic_content').html(data);
+        }
+      });
+
+
+    }
+    load_data(1);
+
+    $(document).on('click', '.page-link', function(){
+      var page = $(this).data('page_number');
+      var query = $('#search_box').val();
+      load_data(page, query);
+    });
+
+    $('#search_box').keyup(function(){
+      var query = $('#search_box').val();
+      load_data(1, query);
+    });
+    
+     $(document).on('click', '#app', function(){
+      var query = $('#app').val();
+      console.log(query);
+      load_data(1, query);
+     });
+
+     $(document).on('click', '#education', function(){
+      var query = $('#education').val();
+      console.log(query);
+      load_data(1, query);
+     });
+     $(document).on('click', '#web', function(){
+      var query = $('#web').val();
+      console.log(query);
+      load_data(1, query);
+     });
+     $(document).on('click', '#cloud', function(){
+      var query = $('#cloud').val();
+      console.log(query);
+      load_data(1, query);
+     });
+     $(document).on('click', '#software', function(){
+      var query = $('#software').val();
+      console.log(query);
+      load_data(1, query);
+     });
+
+  });
+</script>
 </body>
 </html>
