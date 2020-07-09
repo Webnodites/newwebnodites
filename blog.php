@@ -35,16 +35,16 @@ session_start();
 <section id="section1"> 
           
     <header>
-		<div class="logo"><img id="img1" src="Images/logo/wlogo.png"></div>
+		<div class="logo"><a href="index"><img id="img1" src="Images/logo/wlogo.png" alt="LOGO"></a></div>
 		<nav>
-			<ul>
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="about.html"> Who We Are</a></li>
-        <li><a href="services.html"> Services</a></li>
-        <li><a href="portfolio.html"> Portfolio </a></li>
-        <li><a href="blog.php"> Blog </a></li>
-        <li><a href="contact.html"> Contact </a></li>
-			</ul>
+			   <ul>
+                        <li><a href="index"  > Home</a></li>
+                        <li><a href="about"  > Who We Are</a></li>
+                        <li><a href="services" > Services</a></li>
+                        <li><a href="portfolio" > Portfolio </a></li>
+                        <li><a href="blog"  > Blog </a></li>
+                        <li><a href="contact" > Contact </a></li>
+                    </ul> 
 
 		</nav>
 		<div class="menu-toggle"><i class="fa fa-bars"></i></div>
@@ -87,7 +87,7 @@ session_start();
           <img src="Images/blog/<?php echo $blog['img'];?>" class="slider-image">
           <div class="post-info">
             <h4>
-              <a href="blogdetail.php?id=<?php echo $blog['id'];?>"><?php echo substr($blog['title'],0,25);?>...</a>
+              <a href="blogdetail?id=<?php echo $blog['id'];?>"><?php echo substr($blog['title'],0,25);?>...</a>
             </h4>
             <i class="fa fa-user"> <?php echo $blog['user'];?></i>
                 &nbsp;
@@ -185,7 +185,7 @@ session_start();
     <div class="sidebar-contact">
         <div class="toggle"></div>
         <h2>REQUEST A CALL BACK</h2>
-        <form action="contact.php" method="post" class="">
+        <form action="contactmail" method="post" class="">
             <input type="text" class="only-alpha" name="name" placeholder="Name" required>
             <input type="email" class="" name="email" placeholder="Email" required>
             <input type="text" class="only-numeric" name="mobile" maxlength="10" placeholder="Phone Number" required>
@@ -253,14 +253,14 @@ session_start();
                 <div class="row">
                     <div class="col-md-6">
                         <div class="footerlist">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">Who we are</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="blog.html">Blog </a></li>
-                                <li><a href="contact.html">Contact </a></li>      
-                            </ul>
+                               <ul>
+                        <li><a href="index"  > Home</a></li>
+                        <li><a href="about"  > Who We Are</a></li>
+                        <li><a href="services" > Services</a></li>
+                        <li><a href="portfolio" > Portfolio </a></li>
+                        <li><a href="blog"  > Blog </a></li>
+                        <li><a href="contact" > Contact </a></li>
+                    </ul> 
                         </div>
     
                     </div>

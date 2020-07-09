@@ -49,7 +49,7 @@ if($total_data > 0)
                 <img src="Images/blog/'.$blog['img'].'" class="post-image">
               </div>  
               <div class="post-preview col-lg-8 col-md-8 col-sm-12">
-                <h1><a href="blogdetail.php?id='.$blog['id'].'">'. $blog['title'].'</a></h1>
+                <h1><a href="blogdetail?id='.$blog['id'].'">'. $blog['title'].'</a></h1>
                 <i class="fa fa-user">'.$blog['user'].'</i>
                   &nbsp;
                 <i class="fa fa-calendar">'.$blog['date'].'</i>
@@ -58,7 +58,7 @@ if($total_data > 0)
                   
                 </p>
                 <div class="read-more text-right">
-                  <a href="blogdetail.php?id='.$blog['id'].'" class="int_btn ">Read More</a>
+                  <a href="blogdetail?id='.$blog['id'].'" class="int_btn ">Read More</a>
                 </div>
 
               </div>

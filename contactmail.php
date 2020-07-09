@@ -39,7 +39,7 @@ if(isset($_POST["contact_submit"]))
 				  icon: 'success',
 				  button: 'Ok!',
 				}).then(function(){
-			         window.location.href='index.html';
+			         window.location.href='index';
 			         });
 			   </script>";
 	}
@@ -52,7 +52,7 @@ if(isset($_POST["contact_submit"]))
 				  icon: 'error',
 				  button: 'Ok!',
 				}).then(function(){
-			         window.location.href='contact.html';
+			         window.location.href='contact';
 			         });  
 			</script>";
 
@@ -86,7 +86,7 @@ if(isset($_POST["requestcall"]))
 				  icon: 'success',
 				  button: 'Ok!',
 				}).then(function(){
-			         window.location.href='index.html';
+			         window.location.href='index';
 			         });
 			</script>";
 	}
@@ -98,7 +98,7 @@ if(isset($_POST["requestcall"]))
 				  icon: 'error',
 				  button: 'Ok!',
 				}).then(function(){
-			         window.location.href='index.html';
+			         window.location.href='index';
 			         });  
 			</script>";
 
