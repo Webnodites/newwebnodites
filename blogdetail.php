@@ -74,6 +74,7 @@ $bid = $_GET['id'];
                 </p>
               <h2 class="mb-3"><?php echo $blog['title'];?></h2>
               <p><i class="fa fa-calendar"></i> <?php echo $blog['date'];?></p><br>
+              <p><i class="fa fa-circle"></i> <?php echo $blog['category'];?></p><br>
 
               <?php echo $blog['longdes'];?>
           
@@ -84,71 +85,44 @@ $bid = $_GET['id'];
                 </div>
                 <div class="desc col-lg-9 col-md-9">
                   <h3><?php echo $blog['user'];?></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur.</p>
+                  <p><?php echo $blog['userdes'];?></p>
                 </div>
               </div>
   
   
               <div class="pt-5 mt-5">
+
                 <div class="int_heading text-left ">
-                  <h4><span></span>6 Comments</h4>                    
+                  <h4><span></span>All Comments</h4>                    
                 </div>
-                <ul class="comment-list">
-                  <li class="comment row">
-                    <div class="bio col-lg-3">
-                      <img src="Images/blog/person_2.jpg" alt="Image placeholder">
-                    </div>
-                    <div class="comment-body col-lg-9">
-                      <h3>John Doe</h3>
-                      <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit </p>
-                      <div class="reply text-right">
-                          <a href="" class="int_btn ">Reply</a>
-                      </div>
-                    </div>
-                  </li>
-                  
-                   <li class="comment row">
-                    <div class="bio col-lg-3">
-                      <img src="Images/blog/person_2.jpg" alt="Image placeholder">
-                    </div>
-                    <div class="comment-body col-lg-9">
-                      <h3>John Doe</h3>
-                      <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit </p>
-                      <div class="reply text-right">
-                          <a href="" class="int_btn ">Reply</a>
-                      </div>
-                    </div>
-                  </li>
+                <ul class="comment-list" id="comments">
+                 
+                 
                   
                 </ul>
                 <!-- END comment-list -->
-                
+                <input type="hidden" class="form-control" id="bid" value="<?php echo $blog['id'];?>">
                 <div class="comment-form ">
                   <div class="int_heading text-left ">
                   <h4><span></span>Leave A comment</h4>                    
                 </div>
-                  <form action="#" class="">
+                  <form>
+                     <input type="hidden" class="form-control" id="date" value="<?php echo date('Y-m-d')." "; echo date("h:i:sa"); ?>" readonly>
                     <div class="form-group">
                       <label for="name">Name *</label>
-                      <input type="text" class="form-control" id="name">
+                      <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="form-group">
-                      <label for="email">Email *</label>
-                      <input type="email" class="form-control" id="email">
+                      <label for="emai">Email *</label>
+                      <input type="email" class="form-control" id="email" required>
                     </div>
                     <div class="form-group">
-                      <label for="website">Website</label>
-                      <input type="url" class="form-control" id="website">
+                      <label for="message">Comment</label>
+                      <textarea name="" id="message" cols="30" rows="10" class="form-control" required></textarea>
                     </div>
-  
-                    <div class="form-group">
-                      <label for="message">Message</label>
-                      <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                    </div>
+                   
                     <div class="form-group text-left">
-                          <a href="" class="int_btn ">Post</a>
+                          <button type="button" class="int_btn" onclick="adddata()">Post</button>
                       </div>
   
                   </form>
@@ -161,65 +135,35 @@ $bid = $_GET['id'];
             </div> <!-- .col-md-8 -->
             <div class="col-lg-4 side-bar pl-lg-5 ftco-animate">
               
-               <div class="section search">
-                  <div class="int_heading ">
-                  <h4><span></span>Search</h4>                    
-                </div>
-                  <form action="abc.html" method="post">
-                    <input type="text" name="search-term" class="text-input" placeholder="Search">
-                  </form>
-                </div>
-
-                <div class="section topics">
-                  <div class="int_heading slider-title">
-                  <h4><span></span>Topics</h4>                    
-                </div>
-                    <ul>
-                      <li><a href="#">App</a></li>
-                      <li><a href="#">Gates</a></li>
-                      <li><a href="#">Web</a></li>
-                      <li><a href="#">Cloud</a></li>
-                      <li><a href="#">Software</a></li>
-                    </ul>
-                </div>
+      
   
               <div class=" section recent ftco-animate">
                <div class="int_heading slider-title">
-                  <h4><span></span>Recent Blogs</h4>                    
+                  <h4><span></span>Recent Blogs</h4>  
+
                 </div>
+                <?php
+                $qy = "SELECT * FROM `blog` ORDER BY id DESC LIMIT 3";
+                $rs = mysqli_query($con,$qy);
+                foreach ($rs as $blg) {
+                ?>
                 <div class="singleblog">
-                  <a href=""> <img class="blogimg" src="Images/blog/image_1.jpg"></a>
+                  <a href="blogdetail.php?id=<?php echo $blg['id'];?>"> <img class="blogimg" 
+                      src="Images/blog/<?php echo $blg['img'];?>"></a>
                   <div class="text">
-                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                    <h3 class="heading"><a href="blogdetail.php?id=<?php echo $blg['id'];?>"><?php echo $blg['title'];?></a></h3>
                     <div class="meta">
-                      <div><span class="fa fa-calendar"></span> Nov. 14, 2019</div>
-                      <div><span class="fa fa-user"></span> Admin</div>
+                      <div><span class="fa fa-calendar"></span> <?php echo $blog['date'];?></div>
+                      <div><span class="fa fa-user"></span> <?php echo $blog['user'];?></div>
                       
                     </div>
                   </div>
                 </div>
-                 <div class="singleblog">
-                  <a href=""> <img class="blogimg" src="Images/blog/image_1.jpg"></a>
-                  <div class="text">
-                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    <div class="meta">
-                      <div><span class="fa fa-calendar"></span> Nov. 14, 2019</div>
-                      <div><span class="fa fa-user"></span> Admin</div>
-                      
-                    </div>
-                  </div>
-                </div>
-                 <div class="singleblog">
-                  <a href=""> <img class="blogimg" src="Images/blog/image_1.jpg"></a>
-                  <div class="text">
-                    <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                    <div class="meta">
-                      <div><span class="fa fa-calendar"></span> Nov. 14, 2019</div>
-                      <div><span class="fa fa-user"></span> Admin</div>
-                      
-                    </div>
-                  </div>
-                </div>
+
+                 <?php
+
+                  }
+                 ?>
 
                
               </div>
@@ -370,5 +314,67 @@ $bid = $_GET['id'];
        <script src="js/scrollax.min.js"></script>
      
        <script src="js/main.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+          readdata();
+});
+
+   function readdata(){
+         var readdt = "readdt";
+          var bid = $('#bid').val();
+         $.ajax({
+          url: 'comment.php',
+          type: 'POST',
+          data: {
+            readdt : readdt,
+             bid : bid
+          },
+
+          success : function(data,status){
+            $('#comments').empty();
+            console.log(data);
+            $('#comments').html(data);
+          }
+         });
+
+
+  }
+
+
+  function adddata(){
+    var name = $('#name').val();
+    var msg = $('#message').val();
+    var email = $('#email').val();
+    var bid = $('#bid').val();
+    var date = $('#date').val();
+    
+    console.log(name);
+    console.log(msg);
+    console.log(email);
+    console.log(bid);
+    console.log(date);
+
+    $.ajax({
+      url: 'comment.php',
+      type: 'POST',
+      data: {
+        name :name,
+        msg : msg,
+        email : email,
+        bid : bid,
+        date : date,
+      },
+
+      success : function(data,status){
+        $('#name').val('');
+        $('#message').val('');
+        $('#email').val('');
+        readdata();
+      }
+    });
+  }
+</script>       
 </body>
 </html>

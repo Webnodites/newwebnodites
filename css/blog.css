@@ -386,6 +386,12 @@ a{
   z-index: -1;
   bottom: 0;
 } 
+@media (max-width: 768px)
+{
+.local-scroll {
+    padding-left: 90%;
+}
+}
 @media (max-width: 768px)   
 {
 
@@ -454,6 +460,7 @@ a{
   
 
 }
+
 .content .main-content.single .post-content{
   
   margin: 5px;
@@ -659,7 +666,26 @@ color: white;
   transition: all 0.3s;
   color: white;
 }
+.side-bar .section.topics ul li{
+    border-bottom: 1px solid white;
+  }
+  
+.side-bar .section.topics ul button{
+  display: block;
+  padding: 15px 0px 15px 0px;
+  transition: all 0.3s;
+  color: white;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+}
 .side-bar .section.topics ul a:hover{
+  padding-left: 20px;
+  transition:all 0.3s;
+
+}
+.side-bar .section.topics ul button:hover{
   padding-left: 20px;
   transition:all 0.3s;
 
