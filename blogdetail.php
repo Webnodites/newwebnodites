@@ -24,9 +24,12 @@ date_default_timezone_set('Asia/Kolkata');
 <link rel="stylesheet" href="css/blog.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/blog.js"></script>
+<link rel="stylesheet" href="css/pre-loader.css">
 </head>
 
 <body>
+      <!--- This Two Divs are used for Pre-Loader Screen-->
+    <div class="loader_bg"><div class="loader"></div></div>
     <header>
 		<div class="logo"><a href="index"><img id="img1" src="Images/logo/wlogo.png" alt="LOGO"></a></div>
 		<nav>
@@ -375,6 +378,8 @@ date_default_timezone_set('Asia/Kolkata');
       }
     });
   }
-</script>       
+</script>     
+       <script src="js/pre-loader.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
 </body>
 </html>
