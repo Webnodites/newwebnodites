@@ -33,7 +33,7 @@ session_start();
 </head>
 <body>
        <!--- This Two Divs are used for Pre-Loader Screen-->
-    <div class="loader_bg"><div class="loader"></div></div>
+    <div class="loader_bg"><div class="loader"><h3>Loading...</h3></div></div>
 <section id="section1"> 
           
     <header>

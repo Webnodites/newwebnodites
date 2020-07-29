@@ -29,7 +29,7 @@ date_default_timezone_set('Asia/Kolkata');
 
 <body>
       <!--- This Two Divs are used for Pre-Loader Screen-->
-    <div class="loader_bg"><div class="loader"></div></div>
+    <div class="loader_bg"><div class="loader"><h3>Loading...</h3></div></div>
     <header>
 		<div class="logo"><a href="index"><img id="img1" src="Images/logo/wlogo.png" alt="LOGO"></a></div>
 		<nav>
