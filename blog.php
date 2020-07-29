@@ -29,12 +29,12 @@ session_start();
 <link rel="stylesheet" href="css/blog.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/blog.js"></script>
+
 <link rel="stylesheet" href="css/pre-loader.css">
 </head>
 <body>
-       <!--- This Two Divs are used for Pre-Loader Screen-->
+   <!--- This Two Divs are used for Pre-Loader Screen-->
     <div class="loader_bg"><div class="loader"><h3>Loading...</h3></div></div>
-<section id="section1"> 
           
     <header>
 		<div class="logo"><a href="index"><img id="img1" src="Images/logo/wlogo.png" alt="LOGO"></a></div>
@@ -53,7 +53,6 @@ session_start();
     </header>
 
 
-</section>
 <div class="page ng-scope" id="top"> <!-- For Sticky Contact Section-->
 
 <div class="page-section bg-dark-alfa-50 parallax-3 port-banner">
@@ -299,6 +298,9 @@ session_start();
 
 
  <script src="js/validate.js"></script>
+   <script src="js/pre-loader.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
  <script>
   $(document).ready(function(){
 
@@ -360,7 +362,5 @@ session_start();
 
   });
 </script>
-       <script src="js/pre-loader.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>
