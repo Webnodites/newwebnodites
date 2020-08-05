@@ -15,7 +15,7 @@
     width: 150px;
     height: 150px;
     position: absolute;
-    top: calc(50vh - 75px);
+    top: calc(50vh - 100px);
     left: calc(50vw - 75px);
   }
 .loader h3{
