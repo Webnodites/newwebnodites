@@ -19,8 +19,8 @@
     left: calc(50vw - 75px);
   }
 .loader h3{
-    margin-top: 200px;
-    margin-left: 40px;
+    margin-top: 150px;
+    margin-left: 30px;
     color: #06C2C8;
     font-size: 20px;
 }
